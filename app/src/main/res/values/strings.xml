@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Parking</string>
+    <string name="string_license_plate_add_license_plate">Pridaj ŠPZ vozidla</string>
+    <string name="string_license_plate_add_license_next_description">Next</string>
+    <string name="string_license_plate_example">Napr. KE888ZD</string>
+    <string name="string_buy_parking_send_parking">Zaslať SMS lístok</string>
+</resources>

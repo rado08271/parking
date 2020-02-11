@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LicensePlateActivity">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineHeight="24dp"
+            android:text="@string/string_license_plate_add_license_plate"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_license_plate_text_input_layout_add_lp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="16dp"
+            android:layout_width="144dp"
+            app:hintEnabled="false"
+            app:boxBackgroundColor="@color/colorTransparent"
+            app:errorEnabled="true"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/id_license_plate_text_input_edit_text_add_lp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:background="@null"
+                android:inputType="textCapCharacters"
+                android:saveEnabled="true"
+                android:singleLine="true"
+                android:maxLength="7"
+                android:hint="@string/string_license_plate_example" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_license_plate_text_input_layout_next_disabled"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="40dp"
+        app:elevation="0dp"
+        android:visibility="visible"
+        app:backgroundTint="@color/colorNextFloatingButtonDisabled"
+        android:contentDescription="@string/string_license_plate_add_license_next_description"
+        android:src="@drawable/ic_next_white"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/id_license_plate_text_input_layout_next_enabled"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="40dp"
+        app:elevation="0dp"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:contentDescription="@string/string_license_plate_add_license_next_description"
+        android:src="@drawable/ic_next_white"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
