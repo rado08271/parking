@@ -21,7 +21,7 @@
     </style>
 
     <!-- Base application theme. -->
-    <style name="AppTheme.BuyParkingActivity" parent="AppTheme.Material">
+    <style name="AppTheme.BuyParkingActivity" parent="AppTheme">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorNextFloatingButtonDisabled</item>

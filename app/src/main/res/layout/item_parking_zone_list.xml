@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="60dp"
     android:layout_height="60dp"
     app:strokeWidth="1dp"
+    android:id="@+id/id_item_parking_zone_zone_view"
     android:background="@color/colorSplashText"
     app:cardCornerRadius="8dp"
     app:cardPreventCornerOverlap="true"
     app:strokeColor="@color/colorPrimaryDark"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp"
     android:orientation="vertical">
 
     <TextView
@@ -17,4 +19,4 @@
         android:text="A6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>

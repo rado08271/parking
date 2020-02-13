@@ -14,6 +14,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginTop="52dp"
         android:layout_marginHorizontal="108dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/id_buy_parking_title_choose_zone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +34,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/id_buy_parking_recycler_view_zone_list"
         android:layout_width="0dp"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="88dp"
         android:layout_marginHorizontal="40dp"
         android:orientation="horizontal"

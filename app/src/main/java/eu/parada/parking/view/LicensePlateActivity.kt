@@ -11,14 +11,23 @@ import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
 import android.widget.TextView
+import androidx.lifecycle.ViewModel
 import eu.parada.parking.R
+import eu.parada.parking.util.ActivityStarter
+import eu.parada.parking.viewmodel.LicensePlateViewModel
+import eu.parada.parking.viewmodel.SplashViewModel
+import eu.parada.parking.viewmodel.ViewModeFactory
 import kotlinx.android.synthetic.main.activity_license_plate.*
 
 class LicensePlateActivity : AppCompatActivity() {
 
+    private lateinit var viewModel: LicensePlateViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_license_plate)
+
+        viewModel = ViewModeFactory(application).create(LicensePlateViewModel::class.java)
 
         // TODO if not first run and chose to go there than go there
 
@@ -43,12 +52,7 @@ class LicensePlateActivity : AppCompatActivity() {
 
         id_license_plate_text_input_layout_next_enabled.setOnClickListener {
             // TODO add to cache
-            startParkingActivity()
+            viewModel.addNewLicensePlate(id_license_plate_text_input_edit_text_add_lp.text.toString())
         }
-    }
-
-    private fun startParkingActivity() {
-        startActivity(Intent(applicationContext, BuyParkingActivity::class.java))
-
     }
 }
